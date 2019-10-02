@@ -17,9 +17,9 @@ Algoritmo sin_titulo
 			precio<-30+(distancia-300)*0.15;
 		SiNo Si distancia>1000 Entonces
 				precio<-30+(distancia-1000)*0.10;
-			FinSi
-		FinSi
-	FinSi
+			FinSi;
+		FinSi;
+	FinSi;
 	
 	Si peso<2700 Entonces
 		Si ano<=1970 Entonces
@@ -31,9 +31,9 @@ Algoritmo sin_titulo
 			SiNo Si ano>=1980 Entonces
 					categoria<-7;
 					tarifa<-12000;
-				FinSi
-			FinSi
-		FinSi
+				FinSi;
+			FinSi;
+		FinSi;
 	SiNo Si peso>=2700 y peso<3500 Entonces
 			Si ano<=1970 Entonces
 				categoria<-2;
@@ -44,9 +44,9 @@ Algoritmo sin_titulo
 				SiNo Si ano>=1980 Entonces
 						categoria<-7;
 						tarifa<-12000;
-					FinSi
-				FinSi
-			FinSi	
+					FinSi;
+				FinSi;
+			FinSi;
 		SiNo Si peso>=3500 y peso<3800 Entonces
 				Si ano<=1970 Entonces
 					categoria<-2;
@@ -57,9 +57,9 @@ Algoritmo sin_titulo
 					SiNo Si ano>=1980 Entonces
 							categoria<-8;
 							tarifa<-46000;
-						FinSi
-					FinSi
-				FinSi	
+						FinSi;
+					FinSi;
+				FinSi;	
 			SiNo Si peso>=3800 Entonces
 					Si ano<=1970 Entonces
 						categoria<-3;
@@ -70,17 +70,15 @@ Algoritmo sin_titulo
 						SiNo Si ano>=1980 Entonces
 								categoria<-8;
 								tarifa<-46000;
-							FinSi
-						FinSi
-					FinSi			
-				FinSi
-			FinSi
-		FinSi
-	FinSi
-	
-	
+							FinSi;
+						FinSi;
+					FinSi;	
+				FinSi;
+			FinSi;
+		FinSi;
+	FinSi;
+		
 	Escribir "El total a pagar es ", precio, "€";
 	Escribir "La categoría del vehículo es ", categoria, " y su tarifa de registro es ", tarifa, "€"
-	
 	
 FinAlgoritmo
