@@ -21,6 +21,6 @@ Algoritmo sin_titulo
 		FinSi
 	Hasta Que contrasena==clave y codigo==codigoyo
 	
-	Escribir "Los valores introducidos son correctos"
+	Escribir "Los valores introducidos son correctos";
 	
 FinAlgoritmo

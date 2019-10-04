@@ -4,12 +4,12 @@ Algoritmo sin_titulo
 	
 	Escribir "Introduzca la contraseña correcta: ";
 	Leer contrasena;
-	correcto="1234";
+	correcto <- "1234";
 	
 	Mientras contrasena <> correcto Hacer
 		Escribir "Introduzca la contraseña correcta: ";
 		Leer contrasena;
-	Fin Mientras;
+	FinMientras;
 	
 	Escribir "Contraseña correcta";
 	
