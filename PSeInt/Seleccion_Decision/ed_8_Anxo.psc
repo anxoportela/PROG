@@ -9,6 +9,6 @@ Algoritmo contarcaracteres
 		Escribir "El número tiene dos dígitos";
 	SiNo
 		Escribir "El número tiene un solo dígito";
-	Fin Si;
+	FinSi;
 	
 FinAlgoritmo

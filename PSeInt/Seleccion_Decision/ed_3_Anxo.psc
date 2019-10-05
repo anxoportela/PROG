@@ -13,6 +13,6 @@ Algoritmo promedio
 		Escribir "El promedio es mayor de 10";
 	SiNo
 		Escribir "El promedio es menor de 10";
-	Fin Si;
+	FinSi;
 	
 FinAlgoritmo

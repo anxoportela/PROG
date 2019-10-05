@@ -1,14 +1,14 @@
 Algoritmo sin_titulo
 	
-	Definir angulo Como Entero
-	Definir cuadrante Como Caracter
+	Definir angulo Como Entero;
+	Definir cuadrante Como Caracter;
 	
 	Escribir "Introduce el ángulo que quieras comprobar";
 	Leer angulo;
 	
 	Si angulo<0 o angulo>360 Entonces
 		Escribir "Introduzca un valor correcto";
-	SiNo Si angulo==0 o angulo==180 o angulo ==360 Entonces
+	SiNo Si angulo==0 o angulo==180 o angulo==360 Entonces
 			Escribir "Se encuentra en el eje de las X";
 		SiNo		
 			Si angulo==90 o angulo==270 Entonces

@@ -10,18 +10,18 @@ Algoritmo operaciones
 	Leer signo;
 	
 	Si signo == "+" Entonces
-		Escribir "El resultado es: " A+B;
-	Sino Si signo == "-" Entonces 
-			Escribir "El resultado es: " A-B;
-		Sino Si signo == "*" Entonces 
-				Escribir "El resultado es: " A*B;
-			Sino Si signo == "/" Entonces 
-					Escribir "El resultado es: " A/B;
+		Escribir "El resultado es: ", A+B;
+	SiNo Si signo == "-" Entonces 
+			Escribir "El resultado es: ", A-B;
+		SiNo Si signo == "*" Entonces 
+				Escribir "El resultado es: ", A*B;
+			SiNo Si signo == "/" Entonces 
+					Escribir "El resultado es: ", A/B;
 				SiNo
 					Escribir "Error en el símbolo introducido";
-				Fin Si;
-			Fin Si;
-		Fin Si;
-	Fin Si;
+				FinSi;
+			FinSi;
+		FinSi;
+	FinSi;
 	
 FinAlgoritmo

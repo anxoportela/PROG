@@ -10,6 +10,6 @@ Algoritmo mayor_menor
 		Escribir "El resultado de la suma es ", A+B;
 	SiNo
 		Escribir "El resultado de la multiplicación es ", A*B;
-	Fin Si;
+	FinSi;
 	
 FinAlgoritmo

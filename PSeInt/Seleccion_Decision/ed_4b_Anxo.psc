@@ -13,6 +13,6 @@ Algoritmo operaciones
 		Escribir "El resultado de la operación es ", AsignoB;
 	SiNo
 		Escribir "Error en sí­mbolo";
-	Fin Si;
+	FinSi;
 	
 FinAlgoritmo

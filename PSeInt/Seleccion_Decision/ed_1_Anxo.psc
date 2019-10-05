@@ -11,7 +11,7 @@ Algoritmo positivo_negativo
 			Escribir "El número es igual a cero";
 		SiNo
 			Escribir "el número es negativo";
-		Fin Si;
-	Fin Si;
+		FinSi;
+	FinSi;
 	
 FinAlgoritmo
