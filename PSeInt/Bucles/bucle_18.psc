@@ -1,7 +1,7 @@
 Proceso sin_titulo
 	Definir num0,num1,num2 Como Entero;
 	num0<-1;
-	num2<--1;
+	num2<--999999999;
 	
 	Mientras num0<>0 Hacer
 		Escribir "Introduzca un número entero:";
@@ -14,7 +14,7 @@ Proceso sin_titulo
 		FinSi
 	FinMientras
 	
-	Si num2<>-1 Entonces
+	Si num2<>-999999999 Entonces
 		Escribir num2;
 	FinSi
 	

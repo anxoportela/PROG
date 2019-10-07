@@ -1,12 +1,12 @@
 Proceso sin_titulo
 	
-	Definir tamano,tri,asterisco Como Entero;
+	Definir tamano,i,j Como Entero;
 	
 	Escribir "Introduzca el tamaño del triángulo";
 	Leer tamano;
 	
-	Para tri<-1 Hasta tamano Con Paso 1 Hacer
-		Para asterisco<-1 Hasta tri Con Paso 1 Hacer
+	Para i<-1 Hasta tamano Con Paso 1 Hacer
+		Para j<-1 Hasta i Con Paso 1 Hacer
 			Escribir Sin Saltar "* ";
 		FinPara
 		Escribir " ";
