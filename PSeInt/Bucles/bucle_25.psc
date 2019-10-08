@@ -18,6 +18,7 @@ Proceso sin_titulo
 	FinPara
 	
 	Si esPrimo Entonces
+		Escribir "Es primo";
 		dividendo<-num;
 		Mientras dividendo > 0 Hacer
 			resto <- dividendo%10;
@@ -26,8 +27,20 @@ Proceso sin_titulo
 			revescaracter <- Concatenar(revescaracter,revesresto);
 			digitos <- digitos+1;
 		FinMientras
-		Escribir revescaracter;
-		Escribir digitos;
+		reves<-ConvertirANumero(revescaracter);
+		Escribir reves;
+		Para i<-2 Hasta trunc(reves/2) Con Paso 1 Hacer
+			Si reves%i == 0 Entonces
+				esPrimo<-Falso;
+			FinSi
+		FinPara
+		Si esPrimo Entonces
+			Escribir "Es omirp";
+		SiNo
+			Escribir "No es omirp";
+		FinSi
+	SiNo
+		Escribir "No es primo";
 	FinSi
 	
 FinProceso
