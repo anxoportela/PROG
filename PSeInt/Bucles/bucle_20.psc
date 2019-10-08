@@ -20,7 +20,7 @@ Proceso sin_titulo
 	Mientras num<>99 Hacer
 		Escribir "Introduzca un valor entero:";
 		Leer num;
-		Si num>=A y num<=b Entonces
+		Si num>=A y num<=B Entonces
 			suma<-suma+num;
 		FinSi
 	FinMientras

@@ -16,7 +16,7 @@ Proceso sin_titulo
 	resultado<-0;
 	
 	Mientras X<>99 Hacer
-		resultado<-(A*X^2)+(B*X)-C;
+		resultado<-(A*X^2)+(B*X)+C;
 		Escribir "El resultado de la ecuación es: ", resultado;
 		Escribir "Introduzca el valor X:";
 		Leer X;
