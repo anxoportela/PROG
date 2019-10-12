@@ -1,7 +1,7 @@
 Proceso sin_titulo
 	Definir num0,num1,num2,contador,antcontador Como Entero;
 	num0<-1;
-	num2<--1;
+	num2<--999999999;
 	contador<-0;
 	antcontador<-0;
 	
@@ -18,7 +18,7 @@ Proceso sin_titulo
 		FinSi
 	FinMientras
 	
-	Si num2<>-1 Entonces
+	Si num2<>-999999999 Entonces
 		Escribir "El número es ", num2, " y su posición es ", antcontador;
 	FinSi
 	
