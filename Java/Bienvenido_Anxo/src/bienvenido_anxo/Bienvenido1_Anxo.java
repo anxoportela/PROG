@@ -1,6 +1,6 @@
 //Imprimir texto
 
-package bienvenido1_anxo;
+package Bienvenido_anxo;
 
 /**
  *

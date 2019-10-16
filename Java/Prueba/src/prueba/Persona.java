@@ -1,5 +1,5 @@
 
-package prueba;
+package Prueba;
 
 public class Persona {
     
