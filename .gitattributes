@@ -29,4 +29,4 @@
 *.war           binary
 
 
-PseInt/*        linguist-detectable=false
+PSeInt/*        linguist-detectable=false
