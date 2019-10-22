@@ -26,5 +26,4 @@ public class Primeros40Multi3 {
             }
         }
     }
-    
 }

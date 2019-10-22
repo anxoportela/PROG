@@ -57,6 +57,8 @@ public class DiasMes {
                     } else {
                         dias+=28;
                     }
+                default: dias = 0;
+                    break;
             }
         }
         System.out.println("El mes escogido tiene " + dias + " días.");
