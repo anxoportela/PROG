@@ -25,7 +25,7 @@ public class AeR_239 {
         dias = entrada.nextInt();
         emisoras = entrada.nextInt();
         
-        while (dias>0 && emisoras>0){
+        while (dias!=0 || emisoras!=0){
             
             gts = dias*emisoras*24*6;
             
