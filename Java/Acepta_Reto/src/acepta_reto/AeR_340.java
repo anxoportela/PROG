@@ -12,11 +12,11 @@ package acepta_reto;
 
 import java.util.Scanner;
 
-public class AeR_293 {
-
+public class AeR_340 {
+    
     public static void main(String[] args) {
         
-        int casos,insectos,aracnidos,crustaceos,escolopendras,anillos;
+        int cuadHoriz,cuadVert,casos;
         int acumulador,contador;
         
         Scanner entrada;
@@ -25,17 +25,14 @@ public class AeR_293 {
         casos = entrada.nextInt();
         
         for(contador=1;contador<=casos;contador++){
-            insectos = entrada.nextInt();
-            aracnidos = entrada.nextInt();
-            crustaceos = entrada.nextInt();
-            escolopendras = entrada.nextInt();
-            anillos = entrada.nextInt();
             
-            acumulador = (insectos*6)+(aracnidos*8)+(crustaceos*10)+(escolopendras*anillos*2);
+            cuadHoriz = entrada.nextInt();
+            cuadVert = entrada.nextInt();
+            
+            acumulador = (cuadVert+cuadHoriz) + (cuadHoriz*(cuadVert*2));
             
             System.out.println(acumulador);
         }
-        
     }
     
 }
