@@ -34,7 +34,7 @@ public class Bucles_Optativos_7 {
         
         while (dividendo != 0 && baseX<=10) {
             resto = dividendo % baseX;
-            dividendo = dividendo / baseX;
+            dividendo /= baseX;
             conversion += Math.pow((resto * 10),posicion);
             posicion += 1;
         }
