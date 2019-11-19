@@ -19,10 +19,13 @@ public class Str3_Anxo {
         entrada = new Scanner(System.in);
 
         String cadena1, cadena2;
+        int posicion, contador;
         System.out.print("Introduzca la cadena principal: ");
         cadena1 = entrada.nextLine();
         System.out.print("Introduzca la cadena a buscar: ");
         cadena2 = entrada.nextLine();
+        
+        posicion = cadena1.lastIndexOf(cadena2);
 
     }
 

@@ -41,6 +41,7 @@ public class Mas_Arrays_1_Anxo {
         for (int i = 0; i < 5; i++) {
             System.out.printf("%s\t", vector2[i]);
         }
+        System.out.println("");
     }
 
 }
