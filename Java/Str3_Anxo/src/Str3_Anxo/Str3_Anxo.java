@@ -24,9 +24,14 @@ public class Str3_Anxo {
         cadena1 = entrada.nextLine();
         System.out.print("Introduzca la cadena a buscar: ");
         cadena2 = entrada.nextLine();
+        contador =0;
         
-        posicion = cadena1.lastIndexOf(cadena2);
-
+        posicion = cadena1.indexOf(cadena2);
+        while (posicion != -1){
+            contador++;
+            posicion = cadena1.indexOf(cadena2, posicion+1);
+        }
+        System.out.println(contador);
     }
 
 }

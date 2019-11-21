@@ -16,7 +16,7 @@ public class Str1_Anxo {
     public static void main(String[] args) {
 
         Scanner entrada;
-        entrada = new Scanner(System.in);
+        entrada = new Scanner(System.in, "ISO-8859-1");
         String cadena;
 
         System.out.print("Introduzca una cadena de carácteres: ");

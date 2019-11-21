@@ -15,18 +15,22 @@ public class Mas_Arrays_11_Anxo {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-         String[][] equipos = {
+
+        String[][] equipos = {
             {"Barça", "Movistar", "ElPozo", "Osasuna"},
             {"Barcelona", "Madrid", "Murcia", "Osasuna"},
             {"E1", "E2", "E3", "E4"}};
-         
-         for (int i=0; i<equipos.length; i++){
-             for (int j =0; j<equipos.length[i]; j++){
-                 
-             }
-         }
-         
+
+        for (int i = 0; i < equipos.length; i++) {
+            System.out.print("Equipo: " + equipos[0][i] + "\tCiudad: ");
+            for (int j = 1; j < equipos.length; j++) {
+                if (j < 2) {
+                    System.out.print(equipos[j][i] + "\tEstadio: ");
+                } else {
+                    System.out.print(equipos[j][i]);
+                }
+            }
+            System.out.println("");
+        }
     }
-    
 }
