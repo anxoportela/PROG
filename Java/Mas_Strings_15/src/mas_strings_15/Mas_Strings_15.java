@@ -5,27 +5,23 @@
  */
 package mas_strings_15;
 
-import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author Anxo Portela-Insua Blanco <anxoportela@gmail.com>
  */
+
 public class Mas_Strings_15 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        //JOptionPane.showMessageDialog(null, "Hola", "Título Ventana", 0, null);
-        
-        ImageIcon icono = new ImageIcon(Mas_Strings_15.class.getResource("apoyar.png"));
-        String [] s = { "rojo", "verde" };
-        String nombre = (String) JOptionPane.showInputDialog(null, "Indica un nombre", "Peticion de datos", 1, icono, s, s[0]);
-        
-        System.out.println(nombre);
-        
+        int edadNumerica;
+        JFrame box;
+        box = new JFrame();
+        String nombre = JOptionPane.showInputDialog(box, "Introduzca su nombre");
+        String edad =  JOptionPane.showInputDialog(box, "Introduzca su edad");
+        edadNumerica = Integer.parseInt(edad);
+        JOptionPane.showMessageDialog(box, "El nombre introducido es: " + nombre +"\nLa edad introducida es: " + edadNumerica);
     }
-    
 }

@@ -24,8 +24,6 @@ public class LeerArchivo {
         while (entrada.hasNext()) {
             System.out.println(entrada.nextLine());
         }
-
         entrada.close();
     }
-
 }
