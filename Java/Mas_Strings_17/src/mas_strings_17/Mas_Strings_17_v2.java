@@ -62,15 +62,24 @@ public class Mas_Strings_17_v2 {
         botonLimpiar.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 campoTexto.setText("");
+                numPalabras.setText("Número de palabras");
             }    
         });
         
         botonEnviar.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 String [] palabras = campoTexto.getText().split(" ");
-                numPalabras.setText(numPalabras.getText() +" "+ palabras);
+                numPalabras.setText(numPalabras.getText() +"     "+ numPalabras(palabras));
             }    
         });
+    }
+    
+    static int numPalabras(String[] x){
+        return x.length;
+    }
+    
+      static int primeraPalabra(String[] x){
+        return x[0];
     }
     
     
