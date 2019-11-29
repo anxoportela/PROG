@@ -44,92 +44,52 @@ public class Regex1_Anxo {
 
     static boolean cadenaVacia(String x) {
         String patron = "^$";
-        if (x.matches(patron)) {
-            return true;
-        } else {
-            return false;
-        }
+        return x.matches(patron);
     }
 
     static boolean alfaNum(String x) {
         String patron = "[A-z0-9]{8,12}";
-        if (x.matches(patron)) {
-            return true;
-        } else {
-            return false;
-        }
+        return x.matches(patron);
     }
 
     static boolean unaPalabra(String x) {
         String patron = "^[A-z]+$";
-        if (x.matches(patron)) {
-            return true;
-        } else {
-            return false;
-        }
+        return x.matches(patron);
     }
 
     static boolean dosPalabra(String x) {
         String patron = "[A-z]+\\s[A-z]+";
-        if (x.matches(patron)) {
-            return true;
-        } else {
-            return false;
-        }
+        return x.matches(patron);
     }
 
     static boolean numPos2d(String x) {
         String patron = "\\d*.\\d{2}";
-        if (x.matches(patron)) {
-            return true;
-        } else {
-            return false;
-        }
+        return x.matches(patron);
     }
 
     static boolean numPos2dOp(String x) {
         String patron = "\\d*.\\d{1,2}?$";
-        if (x.matches(patron)) {
-            return true;
-        } else {
-            return false;
-        }
+        return x.matches(patron);
     }
 
     static boolean numPos2dOpSigno(String x) {
         String patron = "^[+-]?\\d*.\\d{1,2}?$";
-        if (x.matches(patron)) {
-            return true;
-        } else {
-            return false;
-        }
+        return x.matches(patron);
     }
 
     static boolean fecha(String x) {
         String patron = "\\d{2}\\-\\d{2}\\-\\d{4}";
-        if (x.matches(patron)) {
-            return true;
-        } else {
-            return false;
-        }
+        return x.matches(patron);
     }
 
     static boolean validaTlf(String x) {
         String patron = "\\+(34|351)?\\d{9,10}";
-        if (x.matches(patron)) {
-            return true;
-        } else {
-            return false;
-        }
+        return x.matches(patron);
     }
 
     static boolean vocales(String x) {
         String patron = "[aeiou]{2,}";
-        if (x.toLowerCase().matches(patron)) {
-            return true;
-        } else {
-            return false;
-        }
+        return x.toLowerCase().matches(patron);
     }
 
 }
