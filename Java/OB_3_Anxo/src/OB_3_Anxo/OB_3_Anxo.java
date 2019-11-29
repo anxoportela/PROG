@@ -15,7 +15,7 @@ import java.util.Random;
 public class OB_3_Anxo {
     public static void main(String[] args) {
         Random numRandom = new Random();
-        int[][] matriz = new int[10][10];
+        int[][] matriz = new int[10][5];
         
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
