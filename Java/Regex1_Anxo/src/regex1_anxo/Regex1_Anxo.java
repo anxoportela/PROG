@@ -30,6 +30,10 @@ public class Regex1_Anxo {
         String numPosiOpSig = numPos2dOpSigno(frase) ? "El número valida" : "El número no valida";
         String validaFecha = fecha(frase) ? "La fecha valida" : "La fecha no valida";
         String validaTelefono = validaTlf(frase) ? "El teléfono valida" : "El teléfono no valida";
+        String validaVocales = vocales(frase) ? "La cadena de vocales sin acento es válida" : "La cadena de vocales sin acento no es válida";
+        String validaIban = iban(frase) ? "El IBAN es válido" : "El IBAN no es válido";
+        String validaCodPostal = codPostal(frase) ? "El código postal es válido" : "El código postal no es válido";
+        String validaFactura = factura(frase) ? "La factura es válida" : "La factura no es válida";
 
         System.out.println(vacio);
         System.out.println(tamano);
@@ -40,6 +44,10 @@ public class Regex1_Anxo {
         System.out.println(numPosiOpSig);
         System.out.println(validaFecha);
         System.out.println(validaTelefono);
+        System.out.println(validaVocales);
+        System.out.println(validaIban);
+        System.out.println(validaCodPostal);
+        System.out.println(validaFactura);
     }
 
     static boolean cadenaVacia(String x) {
@@ -90,6 +98,21 @@ public class Regex1_Anxo {
     static boolean vocales(String x) {
         String patron = "[aeiou]{2,}";
         return x.toLowerCase().matches(patron);
+    }
+
+    static boolean iban(String x) {
+        String patron = "^ES\\d{2}(\\-\\d{4}){5}";
+        return x.matches(patron);
+    }
+
+    static boolean codPostal(String x) {
+        String patron = "^(32|15|36|27)\\d{3}";
+        return x.matches(patron);
+    }
+
+    static boolean factura(String x) {
+        String patron = "^(P|G|H)\\-\\d{4}";
+        return x.matches(patron);
     }
 
 }
