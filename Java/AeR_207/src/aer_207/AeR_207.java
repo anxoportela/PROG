@@ -26,13 +26,7 @@ public class AeR_207 {
         arbol = entrada.nextInt();
 
         int[][] matriz = new int[alto][ancho];
-
-        //for (int i =0; i<matriz.length; i++){
-        //    for (int j = 0; j< matriz[i].length;j++){
-        //        System.out.print("* ");
-        //    }
-        //    System.out.println("");
-        //}
+        
         while (arbol > 0) {
             coordx = entrada.nextInt();
             coordy = entrada.nextInt();
