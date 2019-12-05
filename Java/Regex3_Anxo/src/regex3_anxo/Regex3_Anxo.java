@@ -14,12 +14,12 @@ import java.util.Scanner;
  */
 public class Regex3_Anxo {
 
-    public static void main(String[] args) {
-        
-        InputStream ficheiro = Regex3_Anxo.class.getResourceAsStream("texto.txt");
-        Scanner entrada = new Scanner(ficheiro);
-        String patronPuntos = "[.]";
-        String patronComas = "[,]";
+    public static void main(final String[] args) {
+
+        final InputStream ficheiro = Regex3_Anxo.class.getResourceAsStream("texto.txt");
+        final Scanner entrada = new Scanner(ficheiro);
+        final String patronPuntos = "[.]";
+        final String patronComas = "[,]";
         
         while (entrada.hasNext()) {
             System.out.println(entrada.nextLine().replaceAll(patronPuntos, ". ").replaceAll(patronComas, ", "));
