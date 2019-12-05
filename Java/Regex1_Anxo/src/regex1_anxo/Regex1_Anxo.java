@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package regex1_anxo;
 
 import java.util.Scanner;
@@ -16,7 +11,7 @@ public class Regex1_Anxo {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) throws Exception {
 
         Scanner entrada = new Scanner(System.in, "ISO-8859-1");
         System.out.print("Introduzca la frase a comprobar: ");
