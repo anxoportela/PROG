@@ -39,7 +39,7 @@ public class AeR_123 {
 
         String verbo, comando;
 
-        verbo = entrada.next();
+        verbo = entrada.next().toLowerCase();
         comando = entrada.next().toUpperCase();
 
         boolean continuar = true;
@@ -83,11 +83,11 @@ public class AeR_123 {
                     continuar = false;
                     break;
             }
+            
             if (continuar) {
                 verbo = entrada.next();
                 comando = entrada.next().toUpperCase();
             }
         }
     }
-
 }
