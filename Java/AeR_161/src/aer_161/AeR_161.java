@@ -9,14 +9,12 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- *
- * @author anxo
+ * 
+ * @author Anxo Portela-Insua Blanco <anxoportela@gmail.com>
  */
+
 public class AeR_161 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in, "ISO-8859-1");
         int x = entrada.nextInt();

@@ -8,9 +8,10 @@ package aer_151;
 import java.util.Scanner;
 
 /**
- *
- * @author anxo
+ * 
+ * @author Anxo Portela-Insua Blanco <anxoportela@gmail.com>
  */
+
 public class AeR_151 {
 
     public static void main(String[] args) {

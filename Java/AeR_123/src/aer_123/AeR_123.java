@@ -1,16 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* 
+ * Documento creado en 2019 por DAWDU1
+ * CIFP A Carballeira. Proyecto AeR_123.
+ * Contenido con licencia Creative Commons CC BY-NC-SA.
  */
 package aer_123;
 
 import java.util.Scanner;
 
 /**
- *
- * @author anxo
+ * 
+ * @author Anxo Portela-Insua Blanco <anxoportela@gmail.com>
  */
+
 public class AeR_123 {
 
     public static void main(String[] args) {
@@ -23,7 +24,7 @@ public class AeR_123 {
             {"are", "aras", "ara", "aremos", "areis", "aran"}
         };
 
-        String segunda[][] = {
+        String[][] segunda = {
             {"o", "es", "e", "emos", "eis", "en"},
             {"i", "iste", "io", "imos", "isteis", "ieron"},
             {"ere", "eras", "era", "eremos", "ereis", "eran"}
@@ -35,11 +36,11 @@ public class AeR_123 {
             {"ire", "iras", "ira", "iremos", "ireis", "iran"}
         };
 
-        String pronombres[] = {"yo", "tu", "el", "nosotros", "vosotros", "ellos"};
+        String[] pronombres = {"yo", "tu", "el", "nosotros", "vosotros", "ellos"};
 
         String verbo, comando;
 
-        verbo = entrada.next().toLowerCase();
+        verbo = entrada.next();
         comando = entrada.next().toUpperCase();
 
         boolean continuar = true;

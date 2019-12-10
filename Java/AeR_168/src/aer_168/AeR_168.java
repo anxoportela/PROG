@@ -9,9 +9,10 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- *
- * @author anxo
+ * 
+ * @author Anxo Portela-Insua Blanco <anxoportela@gmail.com>
  */
+
 public class AeR_168 {
 
     /**
@@ -41,5 +42,4 @@ public class AeR_168 {
             x = entrada.nextInt();
         }
     }
-    
 }

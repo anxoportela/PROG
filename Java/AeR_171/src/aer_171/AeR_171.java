@@ -6,6 +6,7 @@ import java.util.Scanner;
  *
  * @author Anxo Portela-Insua Blanco <anxoportela@gmail.com>
  */
+
 public class AeR_171 {
 
    
@@ -31,7 +32,5 @@ public class AeR_171 {
             System.out.println(contador);
             x = entrada.nextInt();
         }
-
     }
-
 }
