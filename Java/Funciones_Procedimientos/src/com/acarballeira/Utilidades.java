@@ -5,13 +5,11 @@
  */
 package com.acarballeira;
 
-import java.util.Arrays;
-
 /**
  * Métodos a utilizar dentro del paquete
  *
- * @author Anxo Portela-Insua Blanco <anxoportela@gmail.com>
- * @versión 1.0
+ * @author Anxo Portela-Insua Blanco &#60; anxoportela@gmail.com &#62;
+ * @version 1.0
  *
  */
 public class Utilidades {
@@ -184,6 +182,38 @@ public class Utilidades {
         }
         
         return dias+=(x-1);        
+    }
+    
+    /**
+     * 
+     * @param x
+     * @param y
+     * @param z
+     * @return 
+     */
+    public static int horaASegundos(int x, int y, int z){
+        return x*3600+y*60+z;
+    }
+    
+    /**
+     * 
+     * @param x
+     * @param y
+     * @param z
+     * @return 
+     */
+    public static String horaBonita(int x, int y, int z){
+        String horaError= "00:00:00";
+        return x<0||x>23||y<0||y>59||z<0||z>59?horaError:menorDiez(x)+":"+menorDiez(y)+":"+menorDiez(z);
+    }
+    
+    /**
+     * 
+     * @param x
+     * @return 
+     */
+    public static String menorDiez(int x){
+        return x<10?"0"+x:Integer.toString(x);
     }
 
 }

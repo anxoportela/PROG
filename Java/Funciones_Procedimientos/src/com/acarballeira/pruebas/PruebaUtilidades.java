@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package com.acarballeira;
+package com.acarballeira.pruebas;
 
 /**
  *
@@ -14,15 +14,16 @@ package com.acarballeira;
  */
 
 import static com.acarballeira.Utilidades.*;
-import java.util.Arrays;
 
 public class PruebaUtilidades {
     
     public static void main(String[] args) {
         
-        System.out.println(diasTranscurridos1980(10,12,2019));
+        System.out.println(diasTranscurridos1980(10,12,1979));
         
         System.out.println(Math.round(Math.random()*5+4));
+        
+        System.out.println(horaBonita(2,3,9));
         
     }
     
