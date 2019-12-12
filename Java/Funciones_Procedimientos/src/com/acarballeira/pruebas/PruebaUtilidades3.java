@@ -3,10 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package com.acarballeira.pruebas;
-
-import static com.acarballeira.Utilidades.suma;
 
 /**
  *
@@ -14,11 +11,16 @@ import static com.acarballeira.Utilidades.suma;
  * @versión 1.0
  *
  */
+import static com.acarballeira.Mates.*;
 
-public class PruebaUtilidades2 {
+public class PruebaUtilidades3 {
+
     public static void main(String[] args) {
-        
-        System.out.println(suma(Integer.parseInt(args[0]),Integer.parseInt(args[1]),Integer.parseInt(args[2])));
+
+        System.out.println(esPrimo(7));
+        System.out.println(siguientePrimo(8));
+        System.out.println(digitos(22222));
+        System.out.println(volteaS2(1234));
     }
 
 }
