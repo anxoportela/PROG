@@ -14,5 +14,9 @@ package com.acarballeira;
  */
 
 public class ArUtilidades {
+    
+    public static int [] generaVector(int x, int y, int z){
+    
+}
 
 }
