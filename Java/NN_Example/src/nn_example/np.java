@@ -6,7 +6,6 @@
 package nn_example;
 
 import java.util.Random;
-import java.util.Arrays;
 
 /**
  *
