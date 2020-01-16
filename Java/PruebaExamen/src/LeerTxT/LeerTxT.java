@@ -10,13 +10,15 @@ import java.util.Scanner;
 public class LeerTxT {
 
     public static void main(String[] args) {
-        leotxt();
-        procesoTxT();
+        //leotxt();
+        //procesoTxT();
         cuentaLineas();
-        cuentaLineasBlanco();
-        cuentaLetras();
+        //cuentaLineasBlanco();
+        //cuentaLetras();
     }
-
+    /**
+     * Leemos el texto tal cual
+     */
     public static void leotxt() {
         InputStream fichero = LeerTxT.class.getResourceAsStream("texto.txt");
         Scanner entrada = new Scanner(fichero, "ISO-8859-1");
@@ -47,13 +49,14 @@ public class LeerTxT {
         InputStream fichero = LeerTxT.class.getResourceAsStream("texto.txt");
         Scanner entrada = new Scanner(fichero, "ISO-8859-1");
 
-        String linea;
+        //String linea;
         int numLineas;
 
         numLineas = 0;
 
         while (entrada.hasNext()) {
-            linea = entrada.nextLine();
+            //linea = entrada.nextLine();
+            entrada.nextLine();
             numLineas++;
         }
         
