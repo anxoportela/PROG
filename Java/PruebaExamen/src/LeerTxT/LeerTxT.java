@@ -10,17 +10,18 @@ import java.util.Scanner;
 public class LeerTxT {
 
     public static void main(String[] args) {
-        //leotxt();
+        leotxt("texto.txt");
         //procesoTxT();
-        cuentaLineas();
+        //cuentaLineas();
         //cuentaLineasBlanco();
         //cuentaLetras();
     }
     /**
-     * Leemos el texto tal cual
+     * 
+     * @param nombreTexto 
      */
-    public static void leotxt() {
-        InputStream fichero = LeerTxT.class.getResourceAsStream("texto.txt");
+    public static void leotxt(String nombreTexto) {
+        InputStream fichero = LeerTxT.class.getResourceAsStream(nombreTexto);
         Scanner entrada = new Scanner(fichero, "ISO-8859-1");
 
         while (entrada.hasNext()) {
