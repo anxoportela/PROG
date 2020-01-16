@@ -10,8 +10,8 @@ import java.util.Random;
 
 /**
  *
- * @author Anxo Portela-Insua Blanco <anxoportela@gmail.com>
- * @versión 1.0
+ * @author Anxo Portela-Insua Blanco &#60; anxoportela@gmail.com &#62;
+ * @version 1.0
  *
  */
 public class ArUtilidades {
