@@ -16,8 +16,8 @@ public class PresoDriver {
 
         p1 = new Preso("Martin","Navajas","001",100);
         p2 = new Preso("Pipo","Vive","002",1);
-        p3 = new Preso("Martin","xd","003",5);
-        p4 = new Preso("Martin","xd","004",5);
+        p3 = new Preso("Luis","xd","003",5);
+        p4 = new Preso("Jose","xd","004",5);
 
         //p1.ano();
         //System.out.println(p1.toString());
@@ -32,7 +32,7 @@ public class PresoDriver {
         c1.engadirPreso(p3);
         
         System.out.println(c1.getPresos());
-        c1.quitarPreso(p2);
+        c1.quitarPreso(p4);
         
         System.out.println(c1.getPresos());
         
