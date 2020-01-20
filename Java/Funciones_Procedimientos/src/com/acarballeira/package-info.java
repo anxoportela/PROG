@@ -1,4 +1,4 @@
 /**
- * Aquí va la descripcion del paquete
+ * Funciones y métodos
  */
 package com.acarballeira;
