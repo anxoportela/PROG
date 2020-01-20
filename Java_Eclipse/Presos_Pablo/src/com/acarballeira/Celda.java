@@ -29,39 +29,24 @@ public class Celda {
     public void setAbierta(boolean abierta) {
         this.abierta = abierta;
     }
-    public void abrir() {
-        this.abierta = true;
+    public void abrir(String cod) {
+    	if(cod.equals("1234")) {
+    		this.abierta = true;
+    	} else {
+    		System.out.println("Código Incorrecto");
+    	}
     }
-    public void cerrar() {
-        this.abierta = false;
+    public void cerrar(String cod) {
+    	if(cod.equals("1234")) {
+    		this.abierta = false;
+    	} else {
+    		System.out.println("Código Incorrecto");
+    	}
     }
     
+    @Override
     public String toString() {
-        return String.format("Nombre: %s\nAbierta: %s\n", nombre, abierta ? "Si" : "No");
-    }
-
-    public void engadirPreso(Preso p) {
-        for(int i = 0; i < capacidad;i++) {
-            if (presos[i] == null) {
-                presos[i] = p;
-                break;
-            } 
-            if (i == (capacidad - 1)) {
-                System.out.println("Celda llena");
-            }
-        }
-        
-
-    }
-    
-    public void quitarPreso(Preso p) {
-        for (int i = 0; i < capacidad; i++) {
-            if(presos[i] == p) {
-                presos[i] = null;
-            } else {
-                System.out.println();
-            }
-        }
+        return String.format("Nombre: %s%nAbierta: %s%n", nombre, abierta ? "Si" : "No");
     }
     
     public String getPresos() {
@@ -72,4 +57,28 @@ public class Celda {
         }
         return salida;
     }
+
+    public void engadirPreso(Preso p) {
+        for(int i = 0; i < capacidad;i++) {
+            if (presos[i] == null) {
+                presos[i] = p;
+                break;
+            } 
+            if (i == (capacidad - 1)) {
+                System.out.println("Celda llena");
+                
+            }
+        }
+    }
+    
+    public void quitarPreso(Preso p) {
+        for (int i = 0; i < capacidad; i++) {
+            if(presos[i] == p) {
+                presos[i] = null;
+            } else {
+                System.out.println("");
+            }
+        }
+    }
+    
 }

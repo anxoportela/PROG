@@ -56,6 +56,6 @@ public class Preso extends Persona {
     
     @Override
     public String toString() {
-        return String.format("Nombre: %s\nApodo: %s\nCodigo: %s\nAños de sentencia: %d\n",nombre, apodo,codigo, anosSentencia);
+        return String.format("Nombre: %s%nApodo: %s%nCodigo: %s%nAños de sentencia: %d%n",nombre, apodo,codigo, anosSentencia);
     }
 }
