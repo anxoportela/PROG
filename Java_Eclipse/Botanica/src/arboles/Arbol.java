@@ -24,10 +24,6 @@ public class Arbol {
 	public static int getNumArboles() {
 		return numArboles;
 	}
-
-	public static void setNumArboles(int numArboles) {
-		Arbol.numArboles = numArboles;
-	}
 	
 	public double getAltura() {
 		return altura;
