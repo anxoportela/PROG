@@ -1,4 +1,4 @@
-package arboles;
+package arboles_v2;
 
 public class Arbol {
 	
@@ -23,54 +23,6 @@ public class Arbol {
 
 	public static int getNumArboles() {
 		return numArboles;
-	}
-	
-	public double getAltura() {
-		return altura;
-	}
-
-	public void setAltura(double altura) {
-		this.altura = altura;
-	}
-
-	public int getAno() {
-		return ano;
-	}
-
-	public void setAno(int ano) {
-		this.ano = ano;
-	}
-
-	public String getConcello() {
-		return concello;
-	}
-
-	public void setConcello(String concello) {
-		this.concello = concello;
-	}
-
-	public String getNombreComun() {
-		return nombreComun;
-	}
-
-	public void setNombreComun(String nombreComun) {
-		this.nombreComun = nombreComun;
-	}
-
-	public String getNombreLatino() {
-		return nombreLatino;
-	}
-
-	public void setNombreLatino(String nombreLatino) {
-		this.nombreLatino = nombreLatino;
-	}
-
-	public Hojas getHojas() {
-		return hojas;
-	}
-
-	public void setHojas(Hojas hojas) {
-		this.hojas = hojas;
 	}
 
 	public String toString() {
