@@ -3,10 +3,7 @@ package cubos;
 public class Cubo {
 	
 	int capacidad;
-	int contenido;
-	
-	
-	
+	int contenido;	
 	
 	Cubo(int capacidad) {
 		super();
