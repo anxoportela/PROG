@@ -10,8 +10,8 @@ package com.acarballeira.clases.ejercicio4;
 
 public class Cilindro extends Figura{
 	
-	private double radio;
-	private double altura;
+	public double radio;
+	public double altura;
 
 	public Cilindro(String nombre, double radio, double altura) {
 		super(nombre);

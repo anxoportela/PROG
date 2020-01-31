@@ -6,11 +6,11 @@ public class PruebaHablante {
 
 	public static void main(String[] args) {
 		
-		Perro pipo = new Perro();
-		Espanol luis = new Espanol("Luis","Perez");
+		Perro p = new Perro();
+		Espanol l = new Espanol("Luis","Perez");
 		
-		pipo.saluda();
-		luis.saluda();
+		p.saluda();
+		l.saluda();
 
 	}
 

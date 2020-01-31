@@ -1,0 +1,6 @@
+usuario=user1
+passwd=abc123.
+host=localhost
+rutaImagenes=C:/Users/dual108/Documents/GitHub/PROG/Archivos/img
+rutaLogs=C:/Users/dual108/Documents/GitHub/PROG/Archivos/log
+rutaErores=C:/Users/dual108/Documents/GitHub/PROG/Archivos/err
