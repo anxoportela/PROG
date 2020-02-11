@@ -18,8 +18,8 @@ public class App {
 			System.out.print(integer + " ");
 		}
 		
-		System.out.printf("%nEl nÃºmero mÃ¡ximo del ArrayList es: %d",Collections.max(vectorAleatorios));
-		System.out.printf("%nEl nÃºmero mÃ­nimo del ArrayList es: %d",Collections.min(vectorAleatorios));
+		System.out.printf("%nEl número máximo del ArrayList es: %d",Collections.max(vectorAleatorios));
+		System.out.printf("%nEl número mínimo del ArrayList es: %d",Collections.min(vectorAleatorios));
 		System.out.printf("%nLa suma del ArrayList es: %d",vectorAleatorios.stream().mapToInt(Integer::intValue).sum());
 		System.out.printf("%nLa media del ArrayList es: %d",vectorAleatorios.stream().mapToInt(Integer::intValue).sum()/vectorAleatorios.size());
 

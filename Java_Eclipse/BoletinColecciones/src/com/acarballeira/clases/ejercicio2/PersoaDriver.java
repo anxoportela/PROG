@@ -12,7 +12,7 @@ public class PersoaDriver {
 		vector.add(new Persoa("Luis", 12));
 		vector.add(new Persoa("Jose", 13));
 		vector.add(new Persoa("Manuel", 14));
-		vector.add(new Persoa("MarÃ­a", 15));
+		vector.add(new Persoa("María", 15));
 		vector.add(new Persoa("Rosa", 16));
 		vector.add(new Persoa("Luisa", 17));
 		vector.add(new Persoa("Marcos", 18));

@@ -13,8 +13,13 @@ import java.io.File;
 public class Utilidades {
 
 	public static void main(String[] args) {
-
-		sizeFolder("z:/");
+		
+		//listaDir("z:/");
+		//listaDirDetallado("z:/");
+		//listarDirExt("z:/", "txt");
+		//sizeFolder("z:/");
+		System.out.println(sizeFolderRec("z:/"));
+		
 
 	}
 
@@ -79,6 +84,25 @@ public class Utilidades {
 			}
 			System.out.println(aux);
 		}
+	}
+	
+	public static int sizeFolderRec(String x) {
+		File dir = new File(x);
+		File[] f = dir.listFiles();
+		int aux = 0;
+
+		if (f == null) {
+			System.out.println("No hay ficheros en el directorio especificado");
+		} else {
+			for (int i = 0; i < f.length; i++) {
+				if (f[i].isFile()) {
+					aux += f[i].length();
+				} else {
+					aux += sizeFolderRec(f[i].getPath());
+				}
+			}
+		}
+		return aux;
 	}
 	
 }
