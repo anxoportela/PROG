@@ -1,4 +1,4 @@
-package com.acarballeira;
+package com.acarballeira.clases.ejercicio4;
 
 public class PresoDriver {
 
@@ -27,9 +27,7 @@ public class PresoDriver {
         c1.engadirPreso(p1);
         c1.engadirPreso(p2);
         c1.engadirPreso(p3);
-        c1.engadirPreso(p1);
-        c1.engadirPreso(p2);
-        c1.engadirPreso(p3);
+        c1.engadirPreso(p4);
         
         System.out.println(c1.getPresos());
         c1.quitarPreso(p3);
