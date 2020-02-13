@@ -1,6 +1,6 @@
 package com.acarballeira.clases.ejercicio6;
 
-public class Persoa {
+public class Persoa implements Cloneable {
 	
 	protected String nombre;
 	protected int edad;
@@ -29,4 +29,11 @@ public class Persoa {
 		return "Persoa [nombre=" + nombre + ", edad=" + edad + "]";
 	}
 	
+	@Override
+    protected Object clone() 
+    throws CloneNotSupportedException 
+    { 
+        return super.clone();
+    }
 }
+

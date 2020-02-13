@@ -33,6 +33,7 @@ public class PresoDriver {
         c1.quitarPreso(p3);
         
         System.out.println(c1.getPresos());
+        System.out.println(p1.toString());
         
     }
 

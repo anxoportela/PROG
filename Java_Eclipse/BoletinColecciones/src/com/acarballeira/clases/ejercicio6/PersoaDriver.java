@@ -1,40 +1,50 @@
 package com.acarballeira.clases.ejercicio6;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
+import java.util.Comparator;
 
 public class PersoaDriver {
 
+	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
 		
-		ArrayList<Object> vector = new ArrayList<Object>();
+		ArrayList<Persoa> vector1 = new ArrayList<Persoa>();
+		ArrayList<Persoa> vector2 = new ArrayList<Persoa>();
 		
-		vector.add(new Persoa("Luis", 12));
-		vector.add(new Persoa("Jose", 13));
-		vector.add(new Persoa("Manuel", 14));
-		vector.add(new Persoa("María", 15));
-		vector.add(new Persoa("Rosa", 16));
-		vector.add(new Persoa("Luisa", 17));
-		vector.add(new Persoa("Marcos", 18));
-		vector.add(new Persoa("Ivan", 19));
-		vector.add(new Persoa("Roberto", 20));
-		vector.add(new Persoa("Diego", 21));
+		vector1.add(new Persoa("Luis", 19));
+		vector1.add(new Persoa("Luis", 11));
+		vector1.add(new Persoa("Luis", 14));
+		vector1.add(new Persoa("María", 15));
+		vector1.add(new Persoa("Rosa", 16));
+		vector1.add(new Persoa("Luisa", 17));
+		vector1.add(new Persoa("Marcos", 18));
+		vector1.add(new Persoa("Ivan", 19));
+		vector1.add(new Persoa("Roberto", 20));
+		vector1.add(new Persoa("Diego", 21));
 		
-		//for (int i = 0; i < vector.size(); i++) {
-		//	System.out.println(vector.get(i));
-		//}
+		vector2 = (ArrayList<Persoa>) vector1.clone();
+		vector2.forEach(lista->System.out.println(lista));
 		
-		//for (Object object : vector) {
-		//	System.out.println(object);
-		//}
+		vector1.sort(new Comparator<Persoa>() {
+			@Override
+			public int compare(Persoa o1, Persoa o2) {
+				if (o1.getNombre().compareTo(o2.getNombre())>0) {
+					return 1;
+				} else if (o1.getNombre().compareTo(o2.getNombre())<0) {
+					return -1;
+				} else {
+					if (o1.getEdad()>o2.getEdad()) {
+						return 1;
+					} else if (o1.getEdad()<o2.getEdad()) {
+						return -1;
+					} else {
+						return 0;
+					}
+				}
+			}
+		});
+		vector1.forEach(lista->System.out.println(lista));
 		
-		//Iterator<Object> iterador = vector.iterator();		
-		//while (iterador.hasNext()) {
-		//	System.out.println(iterador.next());			
-		//}
-		
-		vector.forEach(lista->System.out.println(lista));
 
 	}
 
