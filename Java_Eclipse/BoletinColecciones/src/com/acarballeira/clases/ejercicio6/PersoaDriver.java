@@ -44,7 +44,6 @@ public class PersoaDriver {
 			}
 		});
 		vector1.forEach(lista->System.out.println(lista));
-		
 
 	}
 
