@@ -1,6 +1,7 @@
 package com.acarballeira.pruebas.examen1;
 
 import java.util.Comparator;
+import java.util.Objects;
 
 public class Persona {
 
@@ -13,6 +14,7 @@ public class Persona {
 
 	public Persona() {
 		super();
+		this.id = contador++;
 	}
 
 	public Persona(String nombre, String apellidos, int edad, String dni) {
@@ -61,6 +63,19 @@ public class Persona {
 	}
 
 	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Persona other = (Persona) obj;
+		return Objects.equals(apellidos, other.apellidos) && Objects.equals(dni, other.dni) && edad == other.edad
+				&& id == other.id && Objects.equals(nombre, other.nombre);
+	}
+
+	@Override
 	public String toString() {
 		return "Persona [id=" + id + ", nombre=" + nombre + ", apellidos=" + apellidos + ", edad=" + edad + ", dni="
 				+ dni + "]";
@@ -75,4 +90,13 @@ class ComparaEdad implements Comparator<Persona> {
 		return (o1.getEdad() > o2.getEdad()) ? 1 : (o1.getEdad() < o2.getEdad()) ? -1 : 0;
 	}
 
+}
+
+class ComparaNombre implements Comparator<Persona>{
+	
+	@Override
+	public int compare(Persona o1, Persona o2) {
+		return o1.getNombre().compareTo(o2.getNombre());
+	}
+	
 }
