@@ -2,7 +2,7 @@ package com.acarballeira.clases.ejercicio1;
 
 import java.util.ArrayList;
 
-public class companerosClase {
+public class CompanerosClase {
 
 	public static void main(String[] args) {
 		ArrayList<String> companeros = new ArrayList<String>();
