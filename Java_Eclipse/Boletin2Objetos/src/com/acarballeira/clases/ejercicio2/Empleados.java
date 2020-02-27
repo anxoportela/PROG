@@ -37,7 +37,7 @@ public class Empleados extends Personas {
 	
 	@Override
 	public String toString() {
-		return String.format("Empleado%nAño de incorporacion: %d%nDespacho: %d%n%s",ano,despacho,super.toString());
+		return String.format("Empleado%nAÃ±o de incorporacion: %d%nDespacho: %d%n%s",ano,despacho,super.toString());
 	}
 
 }

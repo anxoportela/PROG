@@ -27,7 +27,7 @@ public class Servicio extends Empleados {
 
 	@Override
 	public String toString() {
-		return String.format("PAS%nSección: %d%n%s",seccion,super.toString());
+		return String.format("PAS%nSecciÃ³n: %d%n%s",seccion,super.toString());
 	}
 	
 }

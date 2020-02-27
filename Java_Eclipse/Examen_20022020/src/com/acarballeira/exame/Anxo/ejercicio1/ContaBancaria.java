@@ -4,25 +4,25 @@ import java.util.Comparator;
 import java.util.Objects;
 
 /**
+ * <p>La clase <b>ContaBancaria</b></p>
  *
- * @author dual108
- * @date 20 feb. 2020
+ * @author Anxo Portela-Insua Blanco
  * @version 1.0
- *
+ * @date 20 feb. 2020
  */
 
 public class ContaBancaria {
-	
+
 	protected String nomeCliente;
 	protected String numeroConta;
 	private double tipoInterese;
 	protected double saldo;
 	private static int numContas;
-	
+
 	public ContaBancaria() {
-		super();
+		numContas++;
 	}
-	
+
 	public ContaBancaria(String nomeCliente, String numeroConta, double tipoInterese, double saldo) {
 		super();
 		this.nomeCliente = nomeCliente;
@@ -66,29 +66,41 @@ public class ContaBancaria {
 	public static int getNumContas() {
 		return numContas;
 	}
-	
+
+	/**
+	 * Ingreso.
+	 *
+	 * @param x Cantidade a ingresar.
+	 * @return true, Se a operación se pode realizar.
+	 */
 	public boolean ingreso(double x) {
-		if(x<0) {
+		if (x < 0) {
 			return false;
 		} else {
 			this.saldo += x;
 			return true;
 		}
 	}
-	
+
+	/**
+	 * Reintegro.
+	 *
+	 * @param x Cantidade a retirar.
+	 * @return true, Se a operación se pode realizar.
+	 */
 	public boolean reintegro(double x) {
-		if(x<0) {
+		if (x < 0) {
 			return false;
 		} else {
-			if ((this.getSaldo()-x)<0) {
+			if ((this.getSaldo() - x) < 0) {
 				return false;
 			} else {
-				this.saldo-=x;
+				this.saldo -= x;
 				return true;
 			}
 		}
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -105,26 +117,26 @@ public class ContaBancaria {
 
 	@Override
 	public String toString() {
-		return String.format("N�mero de conta: %s%nSaldo: %.2f%nCliente: %s%n", numeroConta,saldo,nomeCliente);
+		return String.format("Número de conta: %s%nSaldo: %.2f%nCliente: %s%n", numeroConta, saldo, nomeCliente);
 
 	}
 
 }
 
-class ComparaCliente implements Comparator<ContaBancaria>{
+class ComparaCliente implements Comparator<ContaBancaria> {
 
 	@Override
 	public int compare(ContaBancaria o1, ContaBancaria o2) {
 		return o1.nomeCliente.compareTo(o2.nomeCliente);
 	}
-	
+
 }
 
-class ComparaSaldo implements Comparator<ContaBancaria>{
+class ComparaSaldo implements Comparator<ContaBancaria> {
 
 	@Override
 	public int compare(ContaBancaria o1, ContaBancaria o2) {
-		return (o1.saldo>o2.saldo) ? -1 : (o1.saldo<o2.saldo) ? 1 : 0;
+		return (o1.saldo > o2.saldo) ? -1 : (o1.saldo < o2.saldo) ? 1 : 0;
 	}
-	
+
 }

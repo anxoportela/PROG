@@ -1,14 +1,13 @@
 package com.acarballeira.exame.Anxo.ejercicio1;
 
-import java.util.Comparator;
 import java.util.Objects;
 
 /**
+ * <p>La clase <b>Tarxeta</b></p>
  *
- * @author dual108
- * @date 20 feb. 2020
+ * @author Anxo Portela-Insua Blanco
  * @version 1.0
- *
+ * @date 20 feb. 2020
  */
 
 public class Tarxeta extends ContaBancaria {
@@ -16,13 +15,12 @@ public class Tarxeta extends ContaBancaria {
 	private String numero;
 	private String nome;
 	private TipoTarxeta tipo;
-	
+
 	public Tarxeta() {
 		super();
 	}
 	
-	public Tarxeta(String nomeCliente, String numeroConta, double tipoInterese, double saldo, String numero,
-			String nome, TipoTarxeta tipo) {
+	public Tarxeta(String nomeCliente, String numeroConta, double tipoInterese, double saldo, String numero, String nome, TipoTarxeta tipo) {
 		super(nomeCliente, numeroConta, tipoInterese, saldo);
 		this.numero = numero;
 		this.nome = nome;
@@ -67,10 +65,6 @@ public class Tarxeta extends ContaBancaria {
 
 	@Override
 	public String toString() {
-		return String.format("Tarxeta: %s%nTipo: %s%nNúmero de conta: %s%nCliente: %s%nSaldo: %.2f%n", numero, tipo, numeroConta, nomeCliente, saldo);
-	}	
+		return String.format("Tarxeta: %s%nTipo: %s%nNÃºmero de conta: %s%nCliente: %s%nSaldo: %.2f%n", numero, tipo, numeroConta, nomeCliente, saldo);
+	}
 }
-
-
-
-
