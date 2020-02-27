@@ -189,7 +189,7 @@ public class App {
 			BufferedWriter bw = new BufferedWriter(new FileWriter("/home/anxo/GitHub/PROG/Archivos/transferencias.dat", true));
 			String salida = horaFormateada + " Conta Cargo: " + cargo.numeroConta + " - Conta Abono: " + abono.numeroConta + ". Cantidade: " + cantidade;
 			if (cargo.reintegro(cantidade) && abono.ingreso(cantidade)) {
-				System.out.println("\nOperacion correcta.\n");
+				System.out.println("\nOperación correcta.\n");
 				salida += " - Resultado operación: Correcto\r\n";
 			} else {
 				System.out.println("\nProducíuse un erro.\n");
@@ -243,6 +243,7 @@ public class App {
 			eliminarTarxeta(numTarxetaString);
 		} catch (IOException e) {
 			System.out.println("\nProducíuse un erro: " + e.getMessage());
+			generaMenu();
 		}
 
 	}

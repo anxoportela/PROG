@@ -1,4 +1,4 @@
-package com.acarballeira.bd.ejercicio4;
+package com.acarballeira.bd.ejercicio5;
 
 import java.io.IOException;
 import java.io.InputStream;

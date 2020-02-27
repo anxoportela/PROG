@@ -24,7 +24,7 @@ public class ContaBancaria {
 	}
 
 	public ContaBancaria(String nomeCliente, String numeroConta, double tipoInterese, double saldo) {
-		super();
+		this();
 		this.nomeCliente = nomeCliente;
 		this.numeroConta = numeroConta;
 		this.tipoInterese = tipoInterese;
