@@ -1,4 +1,4 @@
-package com.acarballeira.bd.ejercicio5;
+package com.acarballeira.bd.ejercicio6;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -64,7 +64,7 @@ public class Cliente {
 				+ (apellidos != null ? "apellidos=" + apellidos : "") + "]";
 	}
 
-	public List<Cliente> obter(){
+	public static List<Cliente> obter(){
 		
 		ArrayList<Cliente> lista = new ArrayList<Cliente>();
 		
@@ -86,7 +86,7 @@ public class Cliente {
 	
 	}
 	
-	public Cliente obter(int id) {
+	public static Cliente obter(int id) {
 		
 		Cliente aux = new Cliente();
 		
@@ -106,7 +106,7 @@ public class Cliente {
 		
 	}
 	
-	public boolean rexistrar(Cliente cliente) {
+	public static boolean rexistrar(Cliente cliente) {
         boolean rs = false;
         try {
             Connection con = ConexionPool.obtenerConexion();
@@ -121,7 +121,7 @@ public class Cliente {
         return rs;
     }
 	
-	public boolean eliminar(Cliente cliente) {
+	public static boolean eliminar(Cliente cliente) {
 		boolean rs = false;
         try {
             Connection con = ConexionPool.obtenerConexion();
@@ -136,7 +136,7 @@ public class Cliente {
         return rs;
     }
 	
-	public boolean actualizar(Cliente cliente) {
+	public static boolean actualizar(Cliente cliente) {
 		boolean rs = false;
         try {
             Connection con = ConexionPool.obtenerConexion();

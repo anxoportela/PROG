@@ -1,5 +1,5 @@
 user=root
 password=Abc123..
-host=10.10.33.3
+host=10.10.33.6
 port=3306
 bd=bombones

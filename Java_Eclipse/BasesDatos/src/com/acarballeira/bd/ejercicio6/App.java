@@ -1,4 +1,4 @@
-package com.acarballeira.bd.ejercicio5;
+package com.acarballeira.bd.ejercicio6;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -50,8 +50,7 @@ public class App {
 
 		switch (opcion) {
 		case 1:
-			Cliente c1 = new Cliente();
-			ArrayList<Cliente> l = (ArrayList<Cliente>) c1.obter();
+			ArrayList<Cliente> l = (ArrayList<Cliente>) Cliente.obter();
 			l.forEach(p -> System.out.println(p));
 			generaMenu();
 			break;
@@ -63,7 +62,7 @@ public class App {
 				System.out.print("Introduzca los apellidos del cliente: ");
 				String ape = br.readLine();
 				Cliente c2 = new Cliente(nom,ape);
-				c2.rexistrar(c2);
+				Cliente.rexistrar(c2);
 			} catch (IOException e) {
 				e.printStackTrace();
 				generaMenu();
@@ -81,7 +80,7 @@ public class App {
 				String ape = br.readLine();
 				Cliente c3 = new Cliente(nom,ape);
 				c3.setIdCliente(id);
-				c3.actualizar(c3);
+				Cliente.actualizar(c3);
 			} catch (NumberFormatException e) {
 				e.printStackTrace();
 				generaMenu();
@@ -96,9 +95,9 @@ public class App {
 			try {
 				System.out.print("Introduzca el id del cliente: ");
 				int id = Integer.parseInt(br.readLine());
-				Cliente c3 = new Cliente();
-				c3.setIdCliente(id);
-				c3.eliminar(c3);
+				Cliente c4 = new Cliente();
+				c4.setIdCliente(id);
+				Cliente.eliminar(c4);
 			} catch (NumberFormatException e) {
 				e.printStackTrace();
 				generaMenu();
