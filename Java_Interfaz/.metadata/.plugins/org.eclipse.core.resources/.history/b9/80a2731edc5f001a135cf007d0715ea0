@@ -1,0 +1,5 @@
+package com.acarballeira.javaFX.ejemplo10.modelo;
+
+public class Suma {
+
+}

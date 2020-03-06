@@ -1,29 +1,38 @@
 package com.acarballeira.javaFX.ejemplo10;
 
+import java.io.IOException;
+import java.net.URL;
+
 import javafx.application.Application;
-import javafx.geometry.Pos;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class App extends Application {
-	 @Override
-	 public void start(Stage primaryStage) {
+	@Override
+	public void start(Stage primaryStage) {
 
-	 primaryStage.setTitle("Ola Mundo!!!");
-	 primaryStage.setWidth(600);
-	 primaryStage.setHeight(200);
-	 primaryStage.setResizable(false);
+		primaryStage.setTitle("Ola Mundo!!!");
+		Pane ventanaPane;		
+		
+		FXMLLoader loader = new FXMLLoader();
+		URL xmlUrl = App.class.getResource("/com/acarballeira/javaFX/ejemplo10/controlador/sumaScene.fxml");
+		loader.setLocation(xmlUrl);
+		try {
+			ventanaPane = loader.load();
+		} catch (IOException e) {
+			System.out.println("Error: " + e.getMessage());
+			ventanaPane = null;
+		}
 
-	 Label etiqueta = new Label("Ola Mundo!");
-	 etiqueta.setAlignment(Pos.CENTER);
+		Scene primaryScene = new Scene(ventanaPane, 400, 300);
+		primaryStage.setScene(primaryScene);
+		primaryStage.show();
 
-	 Scene primaryScene = new Scene(etiqueta);
-	 primaryStage.setScene(primaryScene);
-	 primaryStage.show();
-
-	 }
-	 public static void main(String[] args) {
-	 Application.launch();
-	 }
 	}
+
+	public static void main(String[] args) {
+		Application.launch();
+	}
+}
