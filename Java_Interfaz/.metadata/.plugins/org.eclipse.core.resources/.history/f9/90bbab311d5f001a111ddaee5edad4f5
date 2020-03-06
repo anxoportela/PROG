@@ -1,0 +1,80 @@
+package com.acarballeira.javaFX.ejemplo8;
+
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
+import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
+
+public class App extends Application {
+	@Override
+	public void start(Stage primaryStage) {
+
+		primaryStage.setTitle("Ola Mundo!!!");
+
+		BorderPane bp = new BorderPane();
+		HBox hbox = (HBox) crearHbox();
+		VBox vbox = (VBox) crearVbox();
+
+		bp.setTop(hbox);
+		bp.setLeft(vbox);
+		hbox.setAlignment(Pos.CENTER);
+
+		Scene primaryScene = new Scene(bp, 300, 300, Color.AQUA);
+		primaryStage.setScene(primaryScene);
+		primaryStage.show();
+
+	}
+
+	private Pane crearHbox() {
+		HBox hbox = new HBox();
+		Button btn1 = new Button("Ver proyectos");
+		Button btn2 = new Button("Añadir proyecto");
+		hbox.setPadding(new Insets(15, 15, 15, 15));
+		hbox.setSpacing(15);
+		hbox.setStyle("-fx-background-color: #995500");
+		btn1.setPrefSize(130, 25);
+		btn2.setPrefSize(130, 25);
+		hbox.getChildren().addAll(btn1, btn2);
+		return hbox;
+	}
+
+	private Pane crearVbox() {
+		VBox vbox = new VBox();
+		vbox.setSpacing(5);
+		vbox.setPadding(new Insets(5));
+		Text titulo = new Text("Menú");
+		titulo.setFont(Font.font("Arial", FontWeight.BOLD, 14));
+		vbox.getChildren().add(titulo);
+		
+		Hyperlink [] opciones = new Hyperlink[] {
+				new Hyperlink("Inicio"),
+				new Hyperlink("Personal"),
+				new Hyperlink("Compras"),
+				new Hyperlink("Ventas"),
+		};
+		
+		for (int i = 0; i < opciones.length; i++) {
+			int x = 18;
+			VBox.setMargin(opciones[i], new Insets(0,0,0,x+=5));
+			vbox.getChildren().add(opciones[i]);
+		}
+		
+		return vbox;
+	}
+
+	public static void main(String[] args) {
+		Application.launch();
+	}
+}
