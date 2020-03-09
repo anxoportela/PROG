@@ -1,5 +1,6 @@
 package com.acarballeira.javaFX.ejemplo11.controlador;
 
+import com.acarballeira.javaFX.ejemplo10.modelo.Suma;
 import com.acarballeira.javaFX.ejemplo11.modelo.Operacion;
 
 import javafx.event.ActionEvent;

@@ -1,5 +1,6 @@
 package com.acarballeira.javaFX.ejemplo11.controlador;
 
+import com.acarballeira.javaFX.ejemplo10.modelo.Suma;
 import com.acarballeira.javaFX.ejemplo11.modelo.Operacion;
 
 import javafx.event.ActionEvent;
@@ -52,7 +53,7 @@ public class OperacionController {
 			Alert alerta = new Alert(AlertType.ERROR);
 			alerta.setHeaderText(null);
 			alerta.setTitle("Error");
-			alerta.setContentText("Formato incorrecto");
+			alerta.setContentText("Formato incorrecto para la suma");
 			alerta.showAndWait();
 		} finally {
 			this.txtOp1.setText("");

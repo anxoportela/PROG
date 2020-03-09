@@ -1,5 +1,6 @@
 package com.acarballeira.javaFX.ejemplo11.controlador;
 
+import com.acarballeira.javaFX.ejemplo10.modelo.Suma;
 import com.acarballeira.javaFX.ejemplo11.modelo.Operacion;
 
 import javafx.event.ActionEvent;
@@ -31,6 +32,9 @@ public class OperacionController {
 
 	@FXML
 	private void hacerOperacion(ActionEvent event) {
+		
+		
+		
 
 		try {
 			int op1 = Integer.parseInt(this.txtOp1.getText());
@@ -48,11 +52,14 @@ public class OperacionController {
 				this.txtResultado.setText(String.valueOf(op.div()));
 			}
 
+			Suma s = new Suma(op1, op2);
+			int res = s.sumar();
+			this.txtResultado.setText(String.valueOf(res));
 		} catch (NumberFormatException e) {
 			Alert alerta = new Alert(AlertType.ERROR);
 			alerta.setHeaderText(null);
 			alerta.setTitle("Error");
-			alerta.setContentText("Formato incorrecto");
+			alerta.setContentText("Formato incorrecto para la suma");
 			alerta.showAndWait();
 		} finally {
 			this.txtOp1.setText("");
