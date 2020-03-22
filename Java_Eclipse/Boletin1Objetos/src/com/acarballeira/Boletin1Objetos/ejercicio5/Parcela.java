@@ -45,12 +45,5 @@ public class Parcela {
 		this.puntoRef2 = puntoRef2;
 	}
 
-	@Override
-	public String toString() {
-		return "Parcela [metros=" + metros + ", puntoRef1=" + puntoRef1 + ", puntoRef2=" + puntoRef2 + "]";
-	}
-	
-	
-
 	
 }

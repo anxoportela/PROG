@@ -19,9 +19,9 @@ import com.acarballeira.bd.ejercicio4.ConexionPool;
 
 public class ClienteDAO {
 
-	public List<Cliente> obter() {
+	public List<Usuario> obter() {
 
-		ArrayList<Cliente> lista = new ArrayList<Cliente>();
+		ArrayList<Usuario> lista = new ArrayList<Usuario>();
 
 		try {
 			int aux = 0;
@@ -29,7 +29,7 @@ public class ClienteDAO {
 			Statement stmt = con.createStatement();
 			ResultSet rs = stmt.executeQuery("SELECT IdCliente, Nombre, Apellidos FROM clientes");
 			while (rs.next()) {
-				lista.add(new Cliente(rs.getString(2), rs.getString(3)));
+				lista.add(new Usuario(rs.getString(2), rs.getString(3)));
 				lista.get(aux).setIdCliente(rs.getInt(1));
 				aux++;
 			}
@@ -41,9 +41,9 @@ public class ClienteDAO {
 
 	}
 
-	public Cliente obter(int id) {
+	public Usuario obter(int id) {
 
-		Cliente aux = new Cliente();
+		Usuario aux = new Usuario();
 
 		try {
 			Connection con = ConexionPool.obtenerConexion();
@@ -61,7 +61,7 @@ public class ClienteDAO {
 
 	}
 
-	public boolean rexistrar(Cliente cliente) {
+	public boolean rexistrar(Usuario cliente) {
 		boolean rs = false;
 		try {
 			Connection con = ConexionPool.obtenerConexion();
@@ -77,7 +77,7 @@ public class ClienteDAO {
 		return rs;
 	}
 
-	public boolean eliminar(Cliente cliente) {
+	public boolean eliminar(Usuario cliente) {
 		boolean rs = false;
 		try {
 			Connection con = ConexionPool.obtenerConexion();
@@ -92,7 +92,7 @@ public class ClienteDAO {
 		return rs;
 	}
 
-	public boolean actualizar(Cliente cliente) {
+	public boolean actualizar(Usuario cliente) {
 		boolean rs = false;
 		try {
 			Connection con = ConexionPool.obtenerConexion();

@@ -13,21 +13,33 @@ import java.util.HashMap;
 public class Diccionario {
 
 	private HashMap<String, String> traduccion;
-	
+
 	public Diccionario() {
-		this.traduccion = new HashMap<String,String>();
+		this.traduccion = new HashMap<String, String>();
 	}
-	
-	public void add(String esp,String ing) {
+
+	public void add(String esp, String ing) {
 		this.traduccion.put(esp, ing);
 	}
 
-	public void del(String esp) {
-		this.traduccion.remove(esp);
+	public void del() {
+		this.traduccion.clear();
 	}
 
-	public void trad(String esp) {
-		this.traduccion.get(esp);
+	public String trad(String esp) {
+		String salida;
+		if (traduccion.size() == 0) {
+			return ("Lista vacía");
+		} else {
+
+			if (traduccion.containsKey(esp)) {
+				salida = traduccion.get(esp);
+				return ("La traducción es: " + salida);
+			} else {
+				return ("Definición no encontrada.");
+			}
+
+		}
 	}
 
 }

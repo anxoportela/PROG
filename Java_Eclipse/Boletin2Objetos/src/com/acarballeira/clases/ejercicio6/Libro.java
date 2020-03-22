@@ -15,13 +15,12 @@ public class Libro {
 	protected int numPaginas;
 	protected String editorial;
 	protected int codigo = 0;
-
-	protected static final byte INCREMENTO_CODIGO=5;
 	
-	public Libro(String titulo, String autor) {
+	public Libro(String titulo, String autor, int codigo) {
 		super();
 		this.titulo = titulo;
 		this.autor = autor;
+		this.codigo = codigo;
 	}
 	
 	public Libro(String titulo, String autor, int numPaginas, String editorial, int codigo) {
@@ -63,10 +62,6 @@ public class Libro {
 
 	public void setEditorial(String editorial) {
 		this.editorial = editorial;
-	}
-
-	public static byte getIncrementoCodigo() {
-		return INCREMENTO_CODIGO;
 	}
 	
 	public int getCodigo() {

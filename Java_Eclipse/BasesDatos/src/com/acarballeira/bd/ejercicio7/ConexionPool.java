@@ -7,6 +7,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Properties;
+import java.util.TimeZone;
 
 /**
  *
@@ -37,7 +38,7 @@ public class ConexionPool {
 	    
 	    private static void crearConexions(int num) {
 	        System.out.println("Creando conexións: " + num);
-	        String cadeaConexion = "jdbc:mysql://" + host + ":" + port + "/" + bd +"?serverTimeZone=Europe/Madrid";
+	        String cadeaConexion = "jdbc:mysql://" + host + ":" + port + "/" + bd + "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=" + TimeZone.getDefault().getID();
 	        for (int i = 0; i < num; i++) {
 	            try {
 	                lista.add(DriverManager.getConnection(cadeaConexion, user, password));

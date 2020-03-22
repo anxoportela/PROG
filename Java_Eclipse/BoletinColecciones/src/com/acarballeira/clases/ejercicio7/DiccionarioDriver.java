@@ -14,34 +14,84 @@ import java.io.InputStreamReader;
  */
 
 public class DiccionarioDriver {
-	
+
 	private Diccionario d;
-	
-	public static void main(String[] args) {
+	BufferedReader bReader = new BufferedReader(new InputStreamReader(System.in));
+
+	public static void main(String[] args) throws IOException {
 		
+		int opcion = 0;
+		DiccionarioDriver d = new DiccionarioDriver();		
 		
+		do {			
+			opcion = d.menu();
+			d.procesaOpcion(opcion);			  
+		} while (opcion != 5);
+
 	}
-	
-	public void menu() {
-		
-		BufferedReader bReader = new BufferedReader(new InputStreamReader(System.in));
+
+	public int menu() {
+
 		String opcion;
-		
-		System.out.println("DICCIONARIO\n-----------\n1. Consultar traducción\n2. Añadir traducción\n3. Vaciar diccionario\n4. Añadir datos de prueba\n5. Salir");
+
+		System.out.println(
+				"DICCIONARIO\n-----------\n1. Consultar traducciï¿½n\n2. Aï¿½adir traducciï¿½n\n3. Vaciar diccionario\n4. Aï¿½adir datos de prueba\n5. Salir");
 		System.out.print("Introduzca la opcion a usar: ");
-		
+
 		try {
 			opcion = bReader.readLine();
 			return Integer.parseInt(opcion);
 		} catch (IOException e) {
-			System.out.println("Opción no válida");
+			System.out.println("Opciï¿½n no vï¿½lida");
 			return 0;
 		} catch (NumberFormatException e) {
-			System.out.println("Error indicando opción");
+			System.out.println("Error indicando opciï¿½n");
 			return 0;
 		}
+
+	}
+
+	public void crearTerminosPrueba() throws IOException {
+
+		d.add("Blanco", "White");
+		d.add("Negro", "Black");
+		d.add("Naranja", "Orange");
+		d.add("Azul", "Blue");
+		d.add("Rojo", "Red");
+
+	}
+	
+public void procesaOpcion(int opcion) throws IOException {
 		
+		String esp;
+		String ing;
 		
+		switch(opcion) {
+			case 1:
+				System.out.print("Introduzca el tÃ©rmino que quiera traducir: ");
+				esp = bReader.readLine();
+				System.out.println(d.trad(esp));
+				break;
+			case 2:
+				System.out.print("Introduzca el tÃ©rmino: ");
+				esp = bReader.readLine();
+				System.out.print("Introduzca la traducciÃ³n: ");
+				ing = bReader.readLine();
+				d.add(esp, ing);
+				break;
+			case 3:
+				d.del();
+				break;
+			case 4:
+				crearTerminosPrueba();
+				break;
+			case 5:
+				break;
+			default:
+				break;
+		}
 		
 	}
+	
+	
 }

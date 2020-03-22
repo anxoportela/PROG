@@ -53,7 +53,7 @@ public class App {
 
 		switch (opcion) {
 		case 1:
-			ArrayList<Cliente> l = (ArrayList<Cliente>) c.obter();
+			ArrayList<Usuario> l = (ArrayList<Usuario>) c.obter();
 			l.forEach(p -> System.out.println(p));
 			generaMenu();
 			break;
@@ -64,7 +64,7 @@ public class App {
 				String nom = br.readLine();
 				System.out.print("Introduzca los apellidos del cliente: ");
 				String ape = br.readLine();
-				Cliente c2 = new Cliente(nom,ape);
+				Usuario c2 = new Usuario(nom,ape);
 				c.rexistrar(c2);
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -81,7 +81,7 @@ public class App {
 				String nom = br.readLine();
 				System.out.print("Introduzca el nuevo apellido del cliente: ");
 				String ape = br.readLine();
-				Cliente c3 = new Cliente(nom,ape);
+				Usuario c3 = new Usuario(nom,ape);
 				c3.setIdCliente(id);
 				c.actualizar(c3);
 			} catch (NumberFormatException e) {
@@ -98,7 +98,7 @@ public class App {
 			try {
 				System.out.print("Introduzca el id del cliente: ");
 				int id = Integer.parseInt(br.readLine());
-				Cliente c4 = new Cliente();
+				Usuario c4 = new Usuario();
 				c4.setIdCliente(id);
 				c.eliminar(c4);
 			} catch (NumberFormatException e) {
